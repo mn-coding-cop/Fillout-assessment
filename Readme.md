@@ -52,7 +52,55 @@ Send a GET request to `/[formId]/filteredResponses` to retrieve filtered respons
 Example:
 
 ```url
-http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"bE2Bo4cGUv49cjnqZ4UnkW","condition":"equals","value":"John"}]
+1. Filter responses where the name is 'Jane':
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"bE2Bo4cGUv49cjnqZ4UnkW","condition":"equals","value":"Jane"}]
+
+```
+
+2. Filter responses where the yearly check-in date is before '2024-01-01':
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"dSRAe3hygqVwTpPK69p5td","condition":"less_than","value":"2024-01-01"}]
+
+```
+
+3. Filter responses where the number of employees working under the respondent is more than 10:
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"fFnyxwWa3KV6nBdfBDCHEA","condition":"greater_than","value":10}]
+
+```
+
+4. Filter responses where the department is 'Engineering' and the yearly check-in date is after '2024-01-01':
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"jB2qDRcXQ8Pjo1kg3jre2J","condition":"equals","value":"Engineering"},{"id":"dSRAe3hygqVwTpPK69p5td","condition":"greater_than","value":"2024-01-01"}]
+
+```
+
+5. Filter responses where the email address contains 'fillout.com':
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"kc6S6ThWu3cT5PVZkwKUg4","condition":"equals","value":"fillout.com"}]
+
+```
+
+6. Filter responses where the name is not 'Billy':
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"bE2Bo4cGUv49cjnqZ4UnkW","condition":"does_not_equal","value":"Billy"}]
+
+```
+
+7. Filter responses where the number of employees working under the respondent is less than or equal to 0:
+```
+
+http://localhost:5000/cLZojxk94ous/filteredResponses?filters=[{"id":"fFnyxwWa3KV6nBdfBDCHEA","condition":"less_than","value":"1"}]
+
+```
+
 ```
 
 ## API Reference
